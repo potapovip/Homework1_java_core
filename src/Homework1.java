@@ -22,5 +22,6 @@ public class Homework1 {
         alphabetArr[3] = 'h';
         String alphabetH = new String(alphabetArr);
         System.out.println(alphabetH);
+        System.out.println();
     }
 }
