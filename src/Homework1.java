@@ -32,7 +32,7 @@ public class Homework1 {
         //Посчитать (a+b)^2 = ?, при a=3, b=5
         int a = 3;
         int b = 5;
-        int result = (a + b)*(a + b);
+        int result = (a + b) * (a + b);
         System.out.println(result);
         //Задача №3
         //Создать два массив чисел:
@@ -40,7 +40,11 @@ public class Homework1 {
         // 2,3,2,17,15
         // Создать массив чисел, в котором будут: все числа из этих двух массивов,
         // и результат умножения чисел с одинаковым порядковым номером
+        int[] arrayA = new int[]{1, 2, 5, 7, 10};
+        int[] arrayB = new int[]{2, 3, 2, 17, 15};
+        int[] arrayR = new int[arrayA.length + arrayB.length];
 
+        System.out.println(Arrays.toString(arrayR));
 
 
     }
