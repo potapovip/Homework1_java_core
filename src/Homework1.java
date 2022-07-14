@@ -1,5 +1,6 @@
 import java.sql.Array;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Homework1 {
     public static void main(String[] args) {
@@ -14,9 +15,9 @@ public class Homework1 {
 
         //Задача №2
         System.out.println("Задача 1.2 :");
-        int weith = 90;
+        int weight = 90;
         double height = 1.87; //можно и через флоат, но тогда не верное кол-во цифр после запятой
-        System.out.printf("%.7f", weith / (height * height));
+        System.out.printf("%.7f", weight / (height * height));
         System.out.println('\n');
 
         //Задача №3
@@ -54,13 +55,20 @@ public class Homework1 {
             arrayR[i] = arrayA[i];
             count++;
         }
-        for (int i = 0; i < arrayB.length; i++) {
-            arrayR[count++] = arrayB[i];
+        for (int j : arrayB) {
+            arrayR[count++] = j;
         }
         for (int i = 0; i < arrayA.length; i++) {
             arrayR[count++] = arrayA[i] * arrayB[i];
         }
         System.out.println(Arrays.toString(arrayR));
+        System.out.println();
+
+        //Задача №4
+        System.out.println("Задача 2.4 :");
+        String frase = "Hello world!";
+        String changedFrase = frase.replace('l', 'r').toUpperCase(Locale.ROOT);
+        System.out.println(changedFrase.substring(0, 8));
 
 
     }
