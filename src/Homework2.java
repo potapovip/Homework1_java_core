@@ -49,5 +49,27 @@ public class Homework2 {
         System.out.println(musya.getAge());
         System.out.println(pluto.getName());
 
+        // Продвинутый уровень
+        // Задание №1:
+        System.out.println("Задание №2.1:");
+        double increment = 0.01123;
+        double result = 0;
+        int count = 0;
+        if (increment > 0) {
+            for (double i = 0; i < 1000000; i = i + increment) {
+                result = result + increment;
+                count++;
+            }
+            System.out.println(count);
+        }
+//        while (result < 1000000) {
+//            if (increment > 0) {
+//                result = result + increment;
+//                count++;
+//            } else break;
+//        }
+//        if (increment > 0) {
+//            System.out.println(count);
+//        }
     }
 }
