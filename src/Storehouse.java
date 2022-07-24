@@ -1,17 +1,17 @@
 public class Storehouse {
-    int quantity;
+    private int quantity;
 
-
-    public Storehouse(int vodkaQuantity) {
-        this.quantity = vodkaQuantity;
-
+    public Storehouse() {
+        this.quantity = 100;
     }
 
     public void setQuantity(int quantity) {
+
         this.quantity = quantity;
     }
 
     public int getQuantity() {
+
         return quantity;
     }
 }

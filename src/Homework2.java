@@ -76,9 +76,11 @@ public class Homework2 {
 
         // Задание №2:
         System.out.println("Задание №2.2:");
-        int[] arr = new int[]{4, 4, 4, 4, 4, 4, 4, 4, 4, 4};
+        int[] arr = new int[]{4, 3, 2, 1, 0, 0, 4, 4, 4, 4};
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = i % 2;
+            if (i % 2 == 0) {
+                arr[i] = 0;
+            }
         }
         System.out.println(Arrays.toString(arr));
 
@@ -122,12 +124,13 @@ public class Homework2 {
         if (hasElectricsProblem || hasMotorProblem || hasTransmissionProblem || hasWheelsProblem) {
             discount -= 0.1;
         }
-        if (hasElectricsProblem && hasMotorProblem && hasTransmissionProblem) {
+        if ((hasElectricsProblem || hasMotorProblem) && hasTransmissionProblem) {
             discount -= 0.2;
         }
         System.out.printf("%.2f", cost * discount);
+        System.out.println();
 
-// Задание №3:
+// Задание №4:
         System.out.println("Задание №2.4:");
         // Написать систему управления складскими запасами. Создать класс склад, создать класс работники
         // (написать геттеры на все аттрибуты).
@@ -136,10 +139,16 @@ public class Homework2 {
         // Работник берет из склада товар, на складе товар уменьшается. Работник когда взял товар, выводит на экран
         // "Ура я испортил водку!" и добавляет к себе в журнал количество испорченного товара.
         // У склада есть только одна позиция - Водка.
-        Workers worker1 = new Workers("Ivan", 0);
-        Workers worker2 = new Workers("Petr", 0);
-        Workers worker3 = new Workers("Misha", 0);
-        Storehouse availableVodka = new Storehouse(50);
+        Storehouse storehouse = new Storehouse();
+        Workers worker1 = new Workers("Ivan", 0, storehouse);
+        Workers worker2 = new Workers("Petr", 0, storehouse);
+        Workers worker3 = new Workers("Misha", 0, storehouse);
+        worker1.takeVodka(2);
+        worker1.takeVodka(2);
+        worker2.takeVodka(10);
+        System.out.println(worker1.getJournal());
+        System.out.println(worker2.getJournal());
+        System.out.println(storehouse.getQuantity());
 
 
     }
