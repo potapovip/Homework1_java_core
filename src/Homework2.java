@@ -15,13 +15,13 @@ public class Homework2 {
         // Задание №2
         System.out.println();
         System.out.println("Задание №2:");
-        int childAge = 18;
+        int childAge = 4;
         if (childAge <= 6) {
             System.out.println("Пошел в сад");
-        } else if (childAge > 6 && childAge <= 11) {
+        } else if (childAge <= 11) {
             System.out.println("Пошел в младшую школу");
 
-        } else if (childAge > 11 && childAge <= 17) {
+        } else if (childAge <= 17) {
             System.out.println("Пошел в среднюю школу");
 
         } else System.out.println("Пошел в университет");
