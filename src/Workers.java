@@ -3,12 +3,10 @@ public class Workers {
     private int journal;
     private Storehouse storehouse;
 
-    public Workers(String nameOfWorker, int journalOfWorker, Storehouse storehouse) {
+
+    public Workers(String nameOfWorker, int journalOfWorker) {
         this.name = nameOfWorker;
         this.journal = journalOfWorker;
-        this.storehouse = storehouse;
-
-
     }
 
     public String getName() {
@@ -27,12 +25,11 @@ public class Workers {
         this.journal = journal;
     }
 
-    public void takeVodka(int ammountVodka) {
-        if (storehouse.getQuantity() > 0) {
-            storehouse.setQuantity(storehouse.getQuantity() - ammountVodka);
-            setJournal(getJournal() + ammountVodka);
-            System.out.println("Ура я испортил водку!");
-        }
+    public void takeVodka(int ammountVodka, Storehouse storehouse) {
+        storehouse.minusVodka(ammountVodka);
+        journal += ammountVodka;
+        System.out.println("Ура я испортил водку!");
+
     }
 
 }

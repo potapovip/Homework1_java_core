@@ -129,12 +129,11 @@ public class Homework2 {
         System.out.println();
         System.out.println("Задание №2.4:");
         Storehouse storehouse = new Storehouse();
-        Workers worker1 = new Workers("Ivan", 0, storehouse);
-        Workers worker2 = new Workers("Petr", 0, storehouse);
-        Workers worker3 = new Workers("Misha", 0, storehouse);
-        worker1.takeVodka(2);
-        worker1.takeVodka(2);
-        worker2.takeVodka(10);
+        Workers worker1 = new Workers("Ivan", 0);
+        Workers worker2 = new Workers("Petr", 0);
+        Workers worker3 = new Workers("Misha", 0);
+        worker1.takeVodka(2,storehouse);
+
         System.out.println(worker1.getJournal());
         System.out.println(worker2.getJournal());
         System.out.println(storehouse.getQuantity());
