@@ -39,7 +39,7 @@ public class Homework2 {
 
         if (chicken && vegetables && sour && toast) {
             System.out.println("Приготовлен салат Цезарь");
-        } else if (vegetables && sausage && chicken && eggs) {
+        } else if (vegetables && (sausage || chicken) && eggs) {
             System.out.println("Приготовлен салат Оливье");
         } else if (vegetables) {
             System.out.println("Приготовлен овощной салат");
