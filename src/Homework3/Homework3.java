@@ -4,6 +4,7 @@ package Homework3;
 import java.io.BufferedReader;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 
@@ -25,7 +26,7 @@ public class Homework3 {
         System.out.println();
         System.out.println("Задание №2:");
 
-        String filePath = "C:\\java\\java_core\\src\\Homework3\\my_first_file.txt";
+        String filePath = "C:\\java\\yury_courses\\Homework1_java_core\\src\\Homework3\\my_first_file.txt";
         FileReader fileReader = new FileReader(filePath);
         BufferedReader BufferedReader = new BufferedReader(fileReader);
         String text = "";
@@ -40,6 +41,18 @@ public class Homework3 {
 //        }
         BufferedReader.close();
         fileReader.close();
-        System.out.print(text);
+        System.out.println(text);
+
+        //Задача №3
+        System.out.println();
+        System.out.println("Задание №3:");
+
+        Financial_record financial_record = new Financial_record(500,300);
+        String pathToReport = "C:\\java\\yury_courses\\Homework1_java_core\\src\\Homework3\\report.txt";
+        FileWriter fileWriter = new FileWriter(pathToReport);
+        fileWriter.write("доходы = " + financial_record.getIncomes()+ "\n" + "расходы = "+ financial_record.getOutcomes());
+        fileWriter.close();
+        System.out.println("Данные записаны в report.txt");
+
     }
 }
