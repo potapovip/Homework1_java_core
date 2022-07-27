@@ -1,3 +1,5 @@
+package Homework2;
+
 public class Cat {
     String name;
     int age;

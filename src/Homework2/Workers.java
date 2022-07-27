@@ -1,3 +1,5 @@
+package Homework2;
+
 public class Workers {
     private String name;
     private int journal;
