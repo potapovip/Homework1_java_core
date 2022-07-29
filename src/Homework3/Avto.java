@@ -3,8 +3,7 @@ package Homework3;
 public abstract class Avto {
     String carBrand;
 
-    public Avto(String carBrand) {
-        this.carBrand = carBrand;
+    public Avto() {
     }
 
     public String getCarBrand() {

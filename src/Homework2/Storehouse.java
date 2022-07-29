@@ -4,6 +4,7 @@ public class Storehouse {
     private int quantity;
 
     public Storehouse() {
+
         this.quantity = 100;
     }
 
