@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Random;
 
 
 public class Homework3 {
@@ -64,8 +65,7 @@ public class Homework3 {
         System.arraycopy(CarFactory.createToyota2(20), 0,  cars, 0,  20);
         System.arraycopy(CarFactory.createZhiguli2(20), 0, cars, 20, 20);
 
-//        CarFactory.createToyota2(20);
-//        CarFactory.createZhiguli2(20);
+
 //        for (int i = 0; i <= 19; i++) {
 //            cars [i] = CarFactory.createToyota();
 //        }
@@ -90,6 +90,23 @@ public class Homework3 {
         // 4. Записать в файл "report.txt" все данные из отчетов.
         // 5. Прочитать файл report.txt, просуммировать все доходы и вывести на экран, тоже самое с расходами
         // Ожидаемый результат: общие доходы - (какое то число), общие расходы - (какое то число)
+        Random random = new Random(1);
+        Financial_record [] financial_record2 = new Financial_record[10];
+        for (int i = 0; i < financial_record2.length; i++) {
+            financial_record2[i]= new Financial_record(random.nextInt(10000),random.nextInt(10000) );
+        }
+        fileWriter = new FileWriter(pathToReport);
+
+        for (int i = 0; i < financial_record2.length; i++) {
+            fileWriter.write(financial_record2.toString());
+            fileWriter.close();
+
+
+
+        }
+//        fileWriter.write("доходы = " + financial_record.getIncomes()+ "\n" + "расходы = "+ financial_record.getOutcomes());
+//        fileWriter.close();
+
 
     }
 }
