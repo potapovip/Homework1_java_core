@@ -1,2 +1,1 @@
-доходы = 500
-расходы = 300
+[LHomework3.Financial_record;@90f6bfd
