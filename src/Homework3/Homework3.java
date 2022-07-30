@@ -26,8 +26,8 @@ public class Homework3 {
         //Задача №2
         System.out.println();
         System.out.println("Задание №2:");
-//        String filePath = "C:\\java\\java_core\\src\\Homework3\\my_first_file.txt"; путь для домашнего ПК
-        String filePath = "C:\\java\\java_core\\src\\Homework3\\my_first_file.txt";
+        String filePath = "C:\\java\\yury_courses\\Homework1_java_core\\src\\Homework3\\my_first_file.txt"; //путь для домашнего ПК
+//        String filePath = "C:\\java\\java_core\\src\\Homework3\\my_first_file.txt";
         FileReader fileReader = new FileReader(filePath);
         BufferedReader BufferedReader = new BufferedReader(fileReader);
         String text = "";
@@ -49,8 +49,8 @@ public class Homework3 {
         System.out.println("Задание №3:");
 
         Financial_record financial_record = new Financial_record(500,300);
-//        String pathToReport = "C:\\java\\java_core\\src\\Homework3\\report.txt"; путь для домашнего ПК
-        String pathToReport = "C:\\java\\java_core\\src\\Homework3\\report.txt";
+        String pathToReport = "C:\\java\\yury_courses\\Homework1_java_core\\src\\Homework3\\report.txt"; //путь для домашнего ПК
+//        String pathToReport = "C:\\java\\java_core\\src\\Homework3\\report.txt";
         FileWriter fileWriter = new FileWriter(pathToReport);
         fileWriter.write("доходы = " + financial_record.getIncomes()+ "\n" + "расходы = "+ financial_record.getOutcomes());
         fileWriter.close();
@@ -58,38 +58,38 @@ public class Homework3 {
 
         //Продвинутый уровень
         //Задача №1
-        // Сделать задачу №1 (1 и 2 пункты) из базовой.
-        // 1. Создать класс CarFactory, у которого есть два статических метода: создать жигули, создать toyota.
-        // 2. Создать 20 тойот, 20 жигулей с помощью CarFactory, положить их в один массив.
-        // 3. Пройтись по массиву, проверить к какому классу принадлежит машина, привести тип к классу машины
-        // и вызвать характерные для нее методы.
         System.out.println();
         System.out.println("Задание №2.1:");
-//        CarFactory.createZhigul(20);
-//        CarFactory.createToyota(20);
-//        Avto [] cars = new Avto[2];
-//        for (int i = 0; i <= 20; i++) {
-//
-//        }
         Avto[] cars = new Avto[40];
-        for (int i = 0; i <= 19; i++) {
-            cars [i] = CarFactory.createToyota();
-        }
-        for (int i = 20; i <= 39; i++) {
-            cars [i] = CarFactory.createZhiguli();
-        }
+        System.arraycopy(CarFactory.createToyota2(20), 0,  cars, 0,  20);
+        System.arraycopy(CarFactory.createZhiguli2(20), 0, cars, 20, 20);
+
+//        CarFactory.createToyota2(20);
+//        CarFactory.createZhiguli2(20);
+//        for (int i = 0; i <= 19; i++) {
+//            cars [i] = CarFactory.createToyota();
+//        }
+//        for (int i = 20; i <= 39; i++) {
+//            cars [i] = CarFactory.createZhiguli();
+//        }
         for (Avto car : cars) {
             if (car instanceof Toyota){
-
+               Toyota car1 = (Toyota) car;
+               car1.turnMusikOn();
+            }else if(car instanceof Zhiguli) {
+                Zhiguli car1 = (Zhiguli) car;
+                car1.Broke();
             }
         }
-
-
-
-
-
-
-
+        System.out.println();
+        System.out.println("Задание №2.2:");
+        //Задача №2
+        // 1. Создать класс Financial record, с двумя атрибутами: incomes, outcomes (доходы, расходы)
+        // 2. Создать в этом классе геттеры, сеттеры и конструктор на все атрибуты
+        // 3. Создать 10 отчетов, с разными доходами и расходами (используй random)
+        // 4. Записать в файл "report.txt" все данные из отчетов.
+        // 5. Прочитать файл report.txt, просуммировать все доходы и вывести на экран, тоже самое с расходами
+        // Ожидаемый результат: общие доходы - (какое то число), общие расходы - (какое то число)
 
     }
 }
