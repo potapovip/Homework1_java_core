@@ -25,5 +25,9 @@ public class Financial_record {
         this.outcomes = outcomes;
     }
 
+    public String serialize(){
+        return this.incomes +";" + this.outcomes +"\n";
+    }
+
 
 }
