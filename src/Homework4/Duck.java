@@ -15,7 +15,11 @@ public class Duck implements Flyable {
         isInjured = injured;
     }
 
-    public void fly() {
+    public void fly() throws FlyException {
+        if(isInjured) {
+            throw new FlyException("Ошибка: утка ранена");
+
+        }
         System.out.println("Утка летит");
     }
 }

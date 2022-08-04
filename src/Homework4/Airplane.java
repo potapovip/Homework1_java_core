@@ -14,7 +14,11 @@ public class Airplane implements Flyable{
     public void setCountPassengers(int countPassengers) {
         this.countPassengers = countPassengers;
     }
-    public void fly (){
+    public void fly () throws FlyException{
+        if(countPassengers<0){
+            throw new FlyException("Ошибка: пассажиров в самолете меньше 0");
+
+        }
         System.out.println("Самолет летит");
     }
 }

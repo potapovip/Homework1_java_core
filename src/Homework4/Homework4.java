@@ -1,7 +1,7 @@
 package Homework4;
 
 public class Homework4 {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
 //Базовый уровень
         //Задача №1
         //1. Создать два класса, которые умеют летать: самолет и утка. Атрибут утки: isInjured (ранен),
@@ -24,13 +24,17 @@ public class Homework4 {
         // Ошибка: утка ранена
         // самолет летит
         // Ошибка: пассажиров в самолете меньше 0
-        Duck duck1 = new Duck(false);
-        Airplane airplane1 = new Airplane(20);
-        Flyable[] flyables = {duck1,airplane1};
-        for (int i = 0; i < flyables.length; i++) {
-            flyables[i].fly();
+        Duck duck2 = new Duck(false);
+        Duck duck1 = new Duck(true);
+        Airplane airplane1 = new Airplane(10);
+        Airplane airplane2 = new Airplane(-1);
+        Flyable[] flyables = {duck2, duck1, airplane1, airplane2};
+        for (Flyable flyable : flyables) {
+            try {
+                flyable.fly();
+            } catch (FlyException e) {
+                System.out.println(e.getMessage());
+            }
         }
-
-
     }
 }
