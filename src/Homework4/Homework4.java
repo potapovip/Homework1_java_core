@@ -35,5 +35,19 @@ public class Homework4 {
         // роза: умееть пахнуть
         // роза: умеет цвести
         // папоротник: умеет цвести
+        Fern fern = new Fern();
+        Fir fir = new Fir();
+        Pine pine = new Pine();
+        Rose rose = new Rose();
+        Smellable[] smellables = {fir, pine,rose};
+        Blossomable [] blossomables = {fern,rose};
+        for (Smellable smellable : smellables) {
+            smellable.smell();
+        }
+        for (Blossomable blossomable : blossomables) {
+            blossomable.blossom();
+        }
+
+
     }
 }
