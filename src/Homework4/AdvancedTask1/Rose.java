@@ -1,4 +1,4 @@
-package Homework4;
+package Homework4.AdvancedTask1;
 
 public class Rose extends Plant implements Blossomable, Smellable{
     @Override

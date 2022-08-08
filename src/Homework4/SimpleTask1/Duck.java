@@ -1,4 +1,4 @@
-package Homework4;
+package Homework4.SimpleTask1;
 
 public class Duck implements Flyable {
     private boolean isInjured;

@@ -1,4 +1,4 @@
-package Homework4;
+package Homework4.AdvancedTask1;
 
 public class Fern extends Plant implements Blossomable{
     public void blossom(){
