@@ -1,5 +1,7 @@
 package Module2.Homework1;
 
+import Module2.Homework1.Animals.*;
+
 public class Main {
     public static void main(String[] args) {
         //Задача №1
@@ -24,5 +26,16 @@ public class Main {
         //1.Создать новый массив T[] с размерностью в два раза больше предыдущей.
         //2.Скопировать со старого массива все значения в новый
         //3.Присвоить экземпляру MyList новый массив.
+        Beaver beaver = new Beaver();
+        Crocodile crocodile = new Crocodile();
+        Lion lion = new Lion();
+        Pigeon pigeon = new Pigeon();
+        Sparrow sparrow = new Sparrow();
+        Tiger tiger = new Tiger();
+        Zoo<Pigeon, Beaver, Lion> Zoo1 = new Zoo<Pigeon, Beaver, Lion>(pigeon, beaver, lion);
+        Zoo<Sparrow, Crocodile, Tiger> zoo2 = new Zoo<Sparrow, Crocodile, Tiger>(sparrow,crocodile,tiger);
+
+
     }
+
 }
