@@ -1,6 +1,6 @@
-package Module2.Homework1;
+package Module2.Homework1.Task1;
 
-import Module2.Homework1.Animals.*;
+import Module2.Homework1.Task1.Animals.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,8 +32,14 @@ public class Main {
         Pigeon pigeon = new Pigeon();
         Sparrow sparrow = new Sparrow();
         Tiger tiger = new Tiger();
-        Zoo<Pigeon, Beaver, Lion> Zoo1 = new Zoo<Pigeon, Beaver, Lion>(pigeon, beaver, lion);
-        Zoo<Sparrow, Crocodile, Tiger> zoo2 = new Zoo<Sparrow, Crocodile, Tiger>(sparrow,crocodile,tiger);
+        Zoo<Pigeon, Beaver, Lion> zoo1 = new Zoo<>(pigeon, beaver, lion);
+        Zoo<Sparrow, Crocodile, Tiger> zoo2 = new Zoo<>();
+
+        zoo2.setBitableAnimal(tiger);
+        zoo2.setFlyableAnimal(sparrow);
+        zoo2.setSwimableAnimal(crocodile);
+        zoo1.feedFlyable();
+        zoo2.feedFlyable();
 
 
     }

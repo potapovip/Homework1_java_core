@@ -1,6 +1,6 @@
-package Module2.Homework1.Animals;
+package Module2.Homework1.Task1.Animals;
 
-import Module2.Homework1.Swimable;
+import Module2.Homework1.Task1.Swimable;
 
 public class Crocodile implements Swimable {
     @Override

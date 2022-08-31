@@ -1,6 +1,6 @@
-package Module2.Homework1.Animals;
+package Module2.Homework1.Task1.Animals;
 
-import Module2.Homework1.Bitable;
+import Module2.Homework1.Task1.Bitable;
 
 public class Tiger implements Bitable {
     @Override

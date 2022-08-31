@@ -1,4 +1,4 @@
-package Module2.Homework1;
+package Module2.Homework1.Task1;
 
 public class Zoo <F extends Flyable, S extends Swimable, B extends Bitable > {
 private F flyableAnimal;
@@ -9,6 +9,9 @@ private B bitableAnimal;
         this.flyableAnimal = flyableAnimal;
         this.swimableAnimal = swimableAnimal;
         this.bitableAnimal = bitableAnimal;
+    }
+
+    public Zoo() {
     }
 
     public F getFlyableAnimal() {
@@ -37,15 +40,15 @@ private B bitableAnimal;
     //Зоопарк имеет методы - void feedFlyable(),void feedSwimable(),void feedBitable(). Логика внутри метода:
     //Печать на экран "летающее животное ест", вызов у животного метода fly() и тд.
     public void feedFlyable(){
-        System.out.println(flyableAnimal + "eat");
+        System.out.println( "летающее животное ест");
         flyableAnimal.fly();
     }
     public void feedSwimable(){
-        System.out.println(swimableAnimal + "eat");
+        System.out.println("плавающее животное ест");
         swimableAnimal.swim();
     }
     public void feedBitable(){
-        System.out.println(bitableAnimal +"eat");
+        System.out.println("кусающее животное ест");
         bitableAnimal.bite();
     }
 }
