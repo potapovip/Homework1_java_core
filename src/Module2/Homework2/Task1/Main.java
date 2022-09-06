@@ -8,7 +8,9 @@ public class Main {
         //Дан лист
         List<Integer> integers = List.of(1,2,3,4,5,5,8,8,9);
         Random random = new Random(1);
-
+        integers.stream()
+                .filter(e -> e>4)
+                .forEach(System.out::println);
         //Задача №1
         //Создать класс пользователей, каждый из которых будет иметь порядковый номер, и список с числами
         //С помощью stream api:

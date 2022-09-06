@@ -5,5 +5,26 @@ import java.util.List;
 
 public class User {
     private int id;
-    private List<Integer> list;
+    private List<Integer> integers;
+
+    public User(int id, List<Integer> integers) {
+        this.id = id;
+        this.integers = integers;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public List<Integer> getIntegers() {
+        return integers;
+    }
+
+    public void setIntegers(List<Integer> integers) {
+        this.integers = integers;
+    }
 }
