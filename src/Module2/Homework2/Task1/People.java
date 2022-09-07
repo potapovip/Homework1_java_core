@@ -28,11 +28,17 @@ private Sex sex;
         this.age = age;
     }
 
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    @Override
+    public String toString() {
+        return "People{" + "name='" + name + '\'' + ", age=" + age + ", sex=" + sex + '}';
+    }
+
+    public void setSex(Sex sex) {
         this.sex = sex;
+
     }
 }
