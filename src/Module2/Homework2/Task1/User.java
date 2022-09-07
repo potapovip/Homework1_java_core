@@ -7,9 +7,9 @@ public class User {
     private int id;
     private List<Integer> integers;
 
-    public User(int id, List<Integer> integers) {
+    public User(int id) {
         this.id = id;
-        this.integers = integers;
+
     }
 
     public int getId() {
